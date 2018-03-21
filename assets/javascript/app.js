@@ -1,7 +1,7 @@
 $(document).ready(function() {
     let randomNum;
     let currentQuestion;
-    const url = "https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple"
+    const url = "https://opentdb.com/api.php?amount=10&category=18&type=multiple"
     let prompt = $("#prompt")
     let answerRow = $("#answer-row")
 
@@ -16,7 +16,7 @@ $(document).ready(function() {
             console.log(currentQuestion)
             $("#start-button").remove()
             
-            prompt.text(currentQuestion.question)
+            prompt.html(currentQuestion.question)
             
             let answer1 = $("<div>").attr("class", "col s12 m3")
             let answer2 = $("<div>").attr("class", "col s12 m3")
@@ -32,7 +32,7 @@ $(document).ready(function() {
                 newButton.attr("class", "waves-effect waves-light btn center answer-button")
 
                 randomNum = Math.floor(Math.random() * answersArr.length)
-                newButton.text(optionsArr[randomNum])
+                newButton.html(optionsArr[randomNum])
                 optionsArr.splice(randomNum, 1)
 
 
