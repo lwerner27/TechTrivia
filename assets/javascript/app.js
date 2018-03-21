@@ -52,7 +52,7 @@ $(document).ready(function() {
                     answerRow.hide()
                     $("#next-button-row").show()
                 } else {
-                    prompt.text(`Incorrect, the correct answer is: ${currentQuestion.correct_answer}`)
+                    prompt.html(`Incorrect, the correct answer is: ${currentQuestion.correct_answer}`)
                     answerRow.hide()
                     $("#next-button-row").show()
                 }
