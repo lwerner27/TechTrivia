@@ -1,7 +1,7 @@
 $(document).ready(function() {
     let randomNum;
     let currentQuestion;
-    const url = "https://opentdb.com/api.php?amount=10&category=18&type=multiple"
+    const url = "https://opentdb.com/api.php?amount=1&type=multiple"
     let prompt = $("#prompt")
     let answerRow = $("#answer-row")
 
